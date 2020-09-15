@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="horoscope.ico" type="image/x-icon">
+	<script src="script.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Oh Horoscope!</title>
+</head>
+<body>
+
+<div id="form">
+	<center><img src="horoscope.png"></center>
+  <h1><span>Oh!</span> Horoscope?</h1>
+  <input id ="userName" placeholder="Name" type="text" />
+  <select id="sunsign"  placeholder ="Astrological Sign">
+  	<option value="none" selected disabled hidden> 
+          Astrological Sign
+      </option>
+  	<option value="Aries">Aries</option>
+  	<option value="Taurus">Taurus</option>
+  	<option value="Gemini">Gemini</option>
+  	<option value="Cancer">Cancer</option>
+  	<option value="Leo">Leo</option>
+  	<option value="Virgo">Virgo</option>
+  	<option value="Libra">Libra</option>
+  	<option value="Scorpio">Scorpio</option>
+  	<option value="Sagittarius">Sagittarius</option>
+  	<option value="Capricorn">Capricorn</option>
+  	<option value="Aquarius">Aquarius</option>
+  	<option value="Pisces">Pisces</option>
+
+  </select> 
+  <select id="frequency">
+  	<option value="none" selected disabled hidden>
+  		Timeline
+  	</option>
+  	<option value="today">Today</option>
+  	<option value="week">Week</option>
+  	<option value="year">Year</option>
+  </select>
+  <button class="btn" id="getHoroscopeBtn">Check</button>
+</div>
+  
+
+
+<div id="Horoscope">
+	<h1 id="name"></h1>
+	<h5 id="duration"></h5>
+	<br>
+	<p id ="myData" align="justify"></p>
+</div>
+
+<footer>
+  <h5>Developed with &hearts; by <a target="_blank" href="https://www.linkedin.com/in/impr2611/">Pratik Ranjan</a></h5>
+  
+</footer>
+
+</body> 
+</html> 
