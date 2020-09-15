@@ -9,4 +9,4 @@ Press Check to get the Horoscope.
 https://github.com/tapaswenipathak/Horoscope-API
 
 #Live Preview
-oh-horoscope.000webhostapp.com
+http://oh-horoscope.000webhostapp.com
