@@ -1,10 +1,7 @@
-
 window.onload=function(){
 const checkBtn = document.getElementById('getHoroscopeBtn');
 checkBtn.addEventListener('click', getHoroscope);
 }
-
-
 
 function getHoroscope(){
   const user = document.getElementById('name');
@@ -12,19 +9,31 @@ function getHoroscope(){
   const horoscope = document.getElementById('myData');
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   const api_url = "http://horoscope-api.herokuapp.com/horoscope/";
-  var name = document.getElementById('userName');
+
+  var name = document.getElementById('userName').value;
   var sign = document.getElementById('sunsign').value;
   var freq = document.getElementById('frequency').value;
+
+  if (sign === "none") {
+    alert("Please select your Sunsign at least!")
+    return;
+  }
+  else if(freq === "none") {
+    setTimeout(function() {alert("Since you haven't selected any timeline, let's see your today's horoscope.")}, 500);
+    freq = "today";
+  }
+
   var url = proxyurl+api_url+freq+"/"+sign;
-  console.log(api_url+sign);
 
   if(name){
-    user.innerHTML="Hi! "+name.value;
+    user.innerHTML="Hi, "+name[0].toUpperCase()+name.slice(1) + "!";
   }
   else{
-    user.innerHTML="Hi! Anonymous!";
+    user.innerHTML="Hi, Anonymous!";
   }
 
+  horoscope.innerHTML = "Fetching your horoscope ... ";
+  
   fetch(url)
   .then(res => res.json())
   .then(data => {
